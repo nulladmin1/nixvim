@@ -1,6 +1,12 @@
 {
   imports = [
-    ./alpha.nix
-    ./wakatime.nix
+    ./code
+    ./editor
+    ./formatting
+    ./linting
+    ./lsp
+    ./ts
+    ./ui
+    ./util
   ];
 }
