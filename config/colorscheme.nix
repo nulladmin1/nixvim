@@ -4,6 +4,7 @@
     settings = {
       flavour = "mocha";
       alpha = true;
+      cmp = true;
     };
   };
 }
