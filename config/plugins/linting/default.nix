@@ -1,4 +1,5 @@
 {
   imports = [
+    ./nvim-lint.nix
   ];
 }
