@@ -48,6 +48,11 @@
             desc = "GoTo Definition";
           };
 
+          gr = {
+            action = "references";
+            desc = "GoTo References";
+          };
+
           "<leader>ca" = {
             action = "code_action";
             desc = "Code Actions";
