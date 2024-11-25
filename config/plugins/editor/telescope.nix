@@ -4,6 +4,8 @@
 
     extensions = {
       frecency.enable = true;
+
+      ui-select.enable = true;
     };
 
     keymaps = {
