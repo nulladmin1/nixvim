@@ -3,6 +3,7 @@
   imports = [ 
     ./bufferline.nix
     ./colorscheme.nix
+    ./opts.nix
 
     ./plugins
   ];
