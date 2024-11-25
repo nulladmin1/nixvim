@@ -35,6 +35,25 @@
         };
         yamlls.enable = true;
       };
+
+      keymaps = {
+        lspBuf = {
+          K = {
+            action = "hover";
+            desc = "Hover";
+          };
+
+          gd = {
+            action = "definition";
+            desc = "GoTo Definition";
+          };
+
+          "<leader>ca" = {
+            action = "code_action";
+            desc = "Code Actions";
+          };
+        };
+      };
     };
 
     lsp-format = {
