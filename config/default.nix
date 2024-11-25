@@ -4,6 +4,7 @@
     ./bufferline.nix
     ./colorscheme.nix
     ./opts.nix
+    ./keymaps.nix
 
     ./plugins
   ];
