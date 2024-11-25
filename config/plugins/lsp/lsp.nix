@@ -33,7 +33,6 @@
           installCargo = true;
           installRustc = true;
         };
-        statix.enable = true;
         yamlls.enable = true;
       };
     };
