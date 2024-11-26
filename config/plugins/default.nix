@@ -7,5 +7,6 @@
     ./lsp
     ./ui
     ./util
+    ./debugging
   ];
 }

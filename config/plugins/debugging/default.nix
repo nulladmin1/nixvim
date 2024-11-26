@@ -1,0 +1,5 @@
+{
+  import = [
+    ./nvim-dap.nix
+  ];
+}
