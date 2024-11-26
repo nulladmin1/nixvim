@@ -3,6 +3,11 @@
     conform-nvim = {
       enable = true;
       settings = {
+        format_on_save = {
+          timeout_ms = 500;
+          lsp_format = "fallback";
+        };
+
         formatters = {
           clang-format = {
             command = "${pkgs.libclang}/bin/clang-format";
@@ -85,4 +90,18 @@
       };
     };
   };
+
+  keymaps = [
+    {
+      mode = "n";
+      key = "<leader>f";
+      action = ''        <cmd>lua require('conform').format({
+                lsp_fallback = true,
+              })<cr>'';
+      options = {
+        silent = true;
+        desc = "Format Buffer";
+      };
+    }
+  ];
 }
