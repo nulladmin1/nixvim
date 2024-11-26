@@ -1,6 +1,33 @@
-# Nixvim template
+# ❄️`NullAdmin1`'s Nixvim Flake ❄️
 
-This template gives you a good starting point for configuring nixvim standalone.
+## Highlights:
+<details>
+  <summary>Linting with nvim-lint:</summary>
+  <br>
+  
+  | Language           | Tool           | Nixpkgs              |
+  |--------------------|----------------|----------------------|
+  | `Bash`             | `shellcheck`   | `pkgs.shellcheck`    |
+  | `JSON`             | `jsonlint`     | `jsonlint`           |
+  | `Markdown`         | `vale`         | `pkgs.vale`          |
+  | `RST`              | `vale`         | `pkgs.vale`          |
+  | `Text`             | `vale`         | `pkgs.vale`          |
+  | `C`                | `cpplint`      | `pkgs.cpplint`       |
+  | `C++`              | `cpplint`      | `pkgs.cpplint`       |
+  | `Go`               | `golangcilint` | `pkgs.golangci-lint` |
+  | `Lua`              | `selene`       | `pkgs.selene`        |
+  | `Python`           | `ruff`         | `pkgs.ruff`          |
+  | `Javascript`       | `eslint_d`     | `pkgs.eslint_d`      |
+  | `Javascript React` | `eslint_d`     | `pkgs.eslint_d`      |
+  | `Java`             | `checkstyle`   | `pkgs.checkstyle`    |
+  | `Rust`             | `clippy`       | `pkgs.clippy`        |
+  | `CMake`            | `cmakelint`    | `pkgs.cmake-lint`    |
+  | `Nix`              | `statix`       | `pkgs.statix`        |
+  </details>
+
+  <details>
+  <summary>Formatting with conform.nvim:</summary>
+  <br>
 
 ## Configuring
 
