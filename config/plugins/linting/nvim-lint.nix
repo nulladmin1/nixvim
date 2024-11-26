@@ -4,8 +4,11 @@
       enable = true;
 
       linters = {
+        shellcheck = {
+          cmd = "${pkgs.shellcheck}/bin/shellcheck";
+        };
         clippy = {
-          cmd = "${pkgs.clippy}/bin/clippy";
+          cmd = "${pkgs.clippy}/bin/cargo-clippy";
         };
         cpplint = {
           cmd = "${pkgs.cpplint}/bin/cppint";
@@ -30,6 +33,9 @@
         };
         statix = {
           cmd = "${pkgs.statix}/bin/statix";
+        };
+        cmakelint = {
+          cmd = "${pkgs.cmake-lint}/bin/cmakelint";
         };
       };
 
