@@ -4,6 +4,5 @@
     ./telescope.nix
     ./treesitter.nix
     ./whichkey.nix
-    ./lazygit.nix
   ];
 }
