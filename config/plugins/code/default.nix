@@ -1,7 +1,7 @@
 {
   imports = [
-  ./cmp.nix
-  ./snippets.nix
+    ./cmp.nix
+    ./snippets.nix
   ];
 
   plugins = {
