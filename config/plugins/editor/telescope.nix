@@ -9,13 +9,13 @@
     };
 
     keymaps = {
-      "<leader>f" = {
+      "<leader>ff" = {
         action = "find_files";
         options = {
           desc = "Telescope File Finder";
         };
       };
-      "<leader>g" = {
+      "<leader>fg" = {
         action = "git_files";
         options = {
           desc = "Telescope Git File Finder";
