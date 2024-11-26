@@ -29,6 +29,26 @@
   <summary>Formatting with conform.nvim:</summary>
   <br>
 
+  | Language           | Tool                 | Nixpkgs                   |
+  |--------------------|----------------------|---------------------------|
+  | `Bash`             | `shellcheck`         | `pkgs.shellcheck`         |
+  | `JSON`             | `prettierd`          | `pkgs.prettierd`          |
+  | `C`                | `clang-format`       | `pkgs.libclang`           |
+  | `C++`              | `clang-format`       | `pkgs.libclang`           |
+  | `Go`               | `gofmt`              | `pkgs.go`                 |
+  | `Lua`              | `stylua`             | `pkgs.stylua`             |
+  | `Python`           | `ruff_format`        | `pkgs.ruff`               |
+  | `HTML`             | `prettierd`          | `pkgs.prettierd`          |
+  | `CSS`              | `prettierd`          | `pkgs.prettierd`          |
+  | `Javascript`       | `prettierd`          | `pkgs.prettierd`          |
+  | `Javascript React` | `prettierd`          | `pkgs.prettierd`          |
+  | `Typescript`       | `prettierd`          | `pkgs.prettierd`          |
+  | `Typescript React` | `prettierd`          | `pkgs.prettierd`          |
+  | `Java`             | `google-java-format` | `pkgs.google-java-format` |
+  | `Rust`             | `rustfmt`            | `pkgs.rustfmt`            |
+  | `CMake`            | `cmake_format`       | `pkgs.cmake-format`       |
+  | `Nix`              | `alejandra`          | `pkgs.alejandra`          |
+
 ## Configuring
 
 To start configuring, just add or modify the nix files in `./config`.
