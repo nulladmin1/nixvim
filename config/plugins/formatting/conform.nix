@@ -91,17 +91,17 @@
     };
   };
 
-  keymaps = [
-    {
-      mode = "n";
-      key = "<leader>f";
-      action = ''        <cmd>lua require('conform').format({
-                lsp_fallback = true,
-              })<cr>'';
-      options = {
-        silent = true;
-        desc = "Format Buffer";
-      };
-    }
-  ];
+  # keymaps = [
+  #   {
+  #     mode = "n";
+  #     key = "<leader>f";
+  #     action = ''        <cmd>lua require('conform').format({
+  #                       lsp_fallback = true,
+  #                     })<cr>'';
+  #     options = {
+  #       silent = true;
+  #       desc = "Format Buffer";
+  #     };
+  #   }
+  # ];
 }
