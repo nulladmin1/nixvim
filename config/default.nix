@@ -1,6 +1,6 @@
 {
   # Import all your configuration modules here
-  imports = [ 
+  imports = [
     ./bufferline.nix
     ./colorscheme.nix
     ./opts.nix
