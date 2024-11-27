@@ -2,6 +2,7 @@
   imports = [
     ./cmp.nix
     ./snippets.nix
+    ./gitignore.nix
   ];
 
   plugins = {
