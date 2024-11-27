@@ -33,6 +33,43 @@
         executables = {
         };
         servers = {
+          codelldb = {
+            executable = {
+              command = "${pkgs.vscode-extensions.vadimcn.vscode-lldb}/share/vscode/extensions/vadimcn.vscode-lldb/adapter/codelldb";
+              args = [
+                "--port"
+                "13000"
+              ];
+            };
+            port = 13000;
+          };
+        };
+      };
+
+      configurations = let
+        codelldb-configuration = {
+          name = "Launch CodeLLDB";
+          type = "codelldb";
+          request = "launch";
+          program.__raw = ''
+            function()
+              return vim.fn.input('Path to executable: ', vim.fn.getcwd() .. '/', 'file')
+            end
+          '';
+          cwd = ''''${workspaceFolder}'';
+          stopOnEntry = false;
+          runInTerminal = true;
+        };
+      in {
+        c = [
+          codelldb-configuration
+        ];
+        cpp = [
+          codelldb-configuration
+        ];
+        rust = [
+          codelldb-configuration
+        ];
       };
 
       signs = {
