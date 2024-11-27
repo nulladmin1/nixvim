@@ -10,6 +10,7 @@
       enable = true;
 
       extensions = {
+        dap-python.enable = true;
 
         dap-go = {
           enable = true;
