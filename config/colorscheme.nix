@@ -7,9 +7,14 @@
       integrations = {
         alpha = true;
         cmp = true;
+        dap = {
+          enabled = true;
+          enable_ui = true;
+        };
         neotree = true;
         treesitter = true;
         telescope.enabled = true;
+        which_key = true;
       };
     };
   };
