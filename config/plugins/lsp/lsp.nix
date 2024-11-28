@@ -28,11 +28,11 @@
         marksman.enable = true;
         pyright.enable = true;
         ruff.enable = true;
-        rust_analyzer = {
-          enable = true;
-          installCargo = true;
-          installRustc = true;
-        };
+        #rust_analyzer = {
+        #  enable = true;
+        #  installCargo = true;
+        #  installRustc = true;
+        #};
         yamlls.enable = true;
       };
 
