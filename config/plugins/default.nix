@@ -8,5 +8,6 @@
     ./ui
     ./util
     ./debugging
+    ./language_specific
   ];
 }
