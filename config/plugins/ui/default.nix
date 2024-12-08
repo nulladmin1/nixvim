@@ -1,6 +1,7 @@
 {
   imports = [
-    ./neotree.nix
+    # ./neotree.nix
     ./lualine.nix
+    ./yazi.nix
   ];
 }
