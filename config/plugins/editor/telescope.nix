@@ -1,4 +1,4 @@
-{
+{pkgs, ...}: {
   plugins.telescope = {
     enable = true;
 
@@ -24,4 +24,8 @@
       "\\" = "live_grep";
     };
   };
+
+  extraPackages = with pkgs; [
+    ripgrep
+  ];
 }
