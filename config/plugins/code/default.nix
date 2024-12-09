@@ -3,6 +3,7 @@
     ./cmp.nix
     ./snippets.nix
     ./gitignore.nix
+    ./copilot-cmp.nix
   ];
 
   plugins = {
