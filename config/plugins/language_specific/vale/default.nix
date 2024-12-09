@@ -1,5 +1,0 @@
-{
-  imports = [
-    ./vale.nix
-  ];
-}
