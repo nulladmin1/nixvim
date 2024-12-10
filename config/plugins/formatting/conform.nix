@@ -51,6 +51,11 @@
           cmake = ["cmake_format"];
           python = ["ruff_format"];
           java = ["google-java-format"];
+          markdown = {
+            __unkeyed-1 = "prettierd";
+            __unkeyed-2 = "prettier";
+            stop_after_first = true;
+          };
           json = {
             __unkeyed-1 = "prettierd";
             __unkeyed-2 = "prettier";

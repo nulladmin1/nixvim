@@ -13,9 +13,9 @@
         cpplint = {
           cmd = "${pkgs.cpplint}/bin/cppint";
         };
-        vale = {
-          cmd = "${pkgs.vale}/bin/vale";
-        };
+        #vale = {
+        #  cmd = "${pkgs.vale}/bin/vale";
+        #};
         golangcilint = {
           cmd = "${pkgs.golangci-lint}/bin/golangci-lint";
         };
@@ -42,9 +42,9 @@
       lintersByFt = {
         bash = ["shellcheck"];
         json = ["jsonlint"];
-        markdown = ["vale"];
-        rst = ["vale"];
-        text = ["vale"];
+        #markdown = ["vale"];
+        #rst = ["vale"];
+        #text = ["vale"];
         c = ["cpplint"];
         cpp = ["cpplint"];
         go = ["golangcilint"];
