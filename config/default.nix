@@ -3,6 +3,7 @@
   imports = [
     ./colorscheme.nix
     ./opts.nix
+    ./settings.nix
     ./keymaps.nix
 
     ./plugins
