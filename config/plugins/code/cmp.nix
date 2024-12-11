@@ -37,9 +37,16 @@
           {
             name = "nvim_lsp";
           }
+
+          # Enable completions from Copilot (./copilot-cmp.nix)
+          {
+            name = "copilot";
+          }
         ];
       };
     };
+
+    # Basically all the sources from above
 
     cmp-nvim-lsp = {
       enable = true;
