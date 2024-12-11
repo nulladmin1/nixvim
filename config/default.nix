@@ -1,7 +1,6 @@
 {
-  # Import all your configuration modules here
+  # Import all the plugins
   imports = [
-    ./colorscheme.nix
     ./opts.nix
     ./settings.nix
     ./keymaps.nix
