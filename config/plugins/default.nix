@@ -9,5 +9,6 @@
     ./util
     ./debugging
     ./language_specific
+    ./themes
   ];
 }
