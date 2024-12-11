@@ -15,5 +15,14 @@
 
     # Copy indent from current line when starting a new line
     autoindent = true;
+
+    # Always show tabline
+    showtabline = 2;
+
+    # Enable highlighting of the line in which the cursor is in
+    cursorline = true;
+
+    # Set line numbers
+    number = true;
   };
 }
