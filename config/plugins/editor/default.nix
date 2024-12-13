@@ -5,5 +5,6 @@
     ./telescope.nix
     ./treesitter.nix
     ./whichkey.nix
+    ./leap.nix
   ];
 }
