@@ -35,6 +35,14 @@
 
       # Live grep using Ripgrep
       "\\" = "live_grep";
+
+      # Shows keymaps using Telescope
+      "<leader>fb" = {
+        action = "keymaps";
+        options = {
+          desc = "Telescope Keymaps";
+        };
+      };
     };
   };
 
