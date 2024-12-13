@@ -30,6 +30,9 @@
         # For Treesitter (../editor/treesitter.nix)
         treesitter = true;
 
+        # For Leap (../editor/leap.nix)
+        leap = true;
+
         # For Telescope (../editor/telescope.nix)
         telescope.enabled = true;
 
