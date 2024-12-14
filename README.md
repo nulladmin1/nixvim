@@ -61,3 +61,10 @@ To test your configuration simply run the following command
 ```
 nix run .
 ```
+
+## Credits
+
+I mostly pulled a lot of code from these people
+
+- [dc-tec](https://github.com/dc-tec/nixvim)
+- [khaneliman](https://github.com/khaneliman/khanelivim)
