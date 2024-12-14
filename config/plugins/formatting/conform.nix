@@ -1,13 +1,21 @@
 {pkgs, ...}: {
+  # Enable Conform.nvim - a code formatter for Neovim (alternative to Null-ls)
+  # See source: https://github.com/stevearc/conform.nvim, options: https://nix-community.github.io/nixvim/search/?query=plugins.conform&option_scope=0&option=plugins.conform-nvim.enable
   plugins = {
     conform-nvim = {
       enable = true;
+
+      # Optional settings for Conform
       settings = {
         format_on_save = {
+          # Timeout for formatting on save
           timeout_ms = 500;
+
+          # Use lsp_format as a fallback if no formatter is available for the filetype
           lsp_format = "fallback";
         };
 
+        # Formatter packages/commands
         formatters = {
           clang-format = {
             command = "${pkgs.libclang}/bin/clang-format";
@@ -40,6 +48,8 @@
             command = "${pkgs.google-java-format}/bin/google-java-format";
           };
         };
+
+        # Map of formatters by filetype
         formatters_by_ft = {
           bash = ["shellcheck"];
           c = ["clang-format"];
