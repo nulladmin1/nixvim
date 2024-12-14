@@ -8,6 +8,10 @@
       # Autoload the configuration for DAP
       dap.autoload_configurations = true;
 
+      tools = {
+        test_executor = "neotest";
+      };
+
       # Server settings
       server = {
         default_settings = {

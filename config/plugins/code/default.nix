@@ -4,6 +4,7 @@
     ./snippets.nix
     ./gitignore.nix
     ./copilot-cmp.nix
+    ./neotest.nix
   ];
 
   plugins = {
