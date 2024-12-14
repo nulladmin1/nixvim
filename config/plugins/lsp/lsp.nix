@@ -1,8 +1,14 @@
 {
   plugins = {
+    # Enable the language server protocol
+    # See source: https://neovim.io/doc/user/lsp.html, options: https://nix-community.github.io/nixvim/search/?query=plugins.lsp&option_scope=0&option=plugins.lsp.enable
     lsp = {
       enable = true;
+
+      # Enable inlay hints
       inlayHints = true;
+
+      # Servers for LSP
       servers = {
         bashls.enable = true;
         cmake.enable = true;
@@ -28,6 +34,8 @@
         marksman.enable = true;
         pyright.enable = true;
         ruff.enable = true;
+
+        # Replaced by Rustaceanvim (see ../language_specific/rust.nix)
         #rust_analyzer = {
         #  enable = true;
         #  installCargo = true;
@@ -36,6 +44,7 @@
         yamlls.enable = true;
       };
 
+      # Keymaps for LSP
       keymaps = {
         lspBuf = {
           K = {
@@ -61,6 +70,7 @@
       };
     };
 
+    # Also format using LSP
     lsp-format = {
       enable = true;
     };
