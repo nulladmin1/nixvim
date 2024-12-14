@@ -1,8 +1,11 @@
 {pkgs, ...}: {
   plugins = {
+    # Linting with nvim-lint
+    # See source: https://github.com/mfussenegger/nvim-lint, options: https://nix-community.github.io/nixvim/search/?query=plugins.lint&option_scope=0&option=plugins.lint.enable
     lint = {
       enable = true;
 
+      # Commands for linters
       linters = {
         shellcheck = {
           cmd = "${pkgs.shellcheck}/bin/shellcheck";
@@ -13,6 +16,7 @@
         cpplint = {
           cmd = "${pkgs.cpplint}/bin/cppint";
         };
+        # Disable due to complexity and errors
         #vale = {
         #  cmd = "${pkgs.vale}/bin/vale";
         #};
@@ -39,6 +43,7 @@
         };
       };
 
+      # Map linters to file types
       lintersByFt = {
         bash = ["shellcheck"];
         json = ["jsonlint"];
