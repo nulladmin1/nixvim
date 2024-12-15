@@ -185,7 +185,7 @@
     {
       mode = "n";
       key = "<leader>d";
-      action = "<cmd>lua require('dapui').toggle()";
+      action = "<cmd>lua require('dapui').toggle()<cr>";
       options.desc = "Toggle Debugger UI";
     }
   ];
