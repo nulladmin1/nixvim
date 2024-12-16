@@ -47,6 +47,9 @@
 | `Rust`             | `rustfmt` (with `Rustaceanvim`) | `pkgs.rustfmt`            |
 | `CMake`            | `cmake_format`                  | `pkgs.cmake-format`       |
 | `Nix`              | `alejandra`                     | `pkgs.alejandra`          |
+  </details>
+
+
 
 ## Configuring
 
