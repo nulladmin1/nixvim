@@ -14,7 +14,7 @@
           cmd = "${pkgs.clippy}/bin/cargo-clippy";
         };
         cpplint = {
-          cmd = "${pkgs.cpplint}/bin/cppint";
+          cmd = "${pkgs.cpplint}/bin/cpplint";
         };
         # Disable due to complexity and errors
         #vale = {
