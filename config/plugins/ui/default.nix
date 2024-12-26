@@ -4,5 +4,6 @@
     ./lualine.nix
     ./yazi.nix
     ./bufferline.nix
+    ./colorizer.nix
   ];
 }
