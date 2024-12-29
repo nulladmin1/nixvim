@@ -22,7 +22,7 @@
     {
       mode = "n";
       key = "<leader>tn";
-      action = "<CMD>NeotestRun<CR>";
+      action = "<CMD>Neotest Run<CR>";
       options.desc = "Run all tests";
     }
     {
