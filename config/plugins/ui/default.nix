@@ -5,5 +5,6 @@
     ./yazi.nix
     ./bufferline.nix
     ./colorizer.nix
+    ./smear-cursors.nix
   ];
 }
