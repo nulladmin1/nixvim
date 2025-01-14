@@ -16,7 +16,7 @@
       theme = "dark";
 
       # Port for the preview server
-      port = "69420";
+      port = "42069";
 
       # Use the github-markdown-css theme for the preview
       markdown_css = let
