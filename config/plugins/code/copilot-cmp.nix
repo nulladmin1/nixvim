@@ -6,9 +6,11 @@
     copilot-lua = {
       enable = true;
 
-      # These 2 needed to be disabled to use with copilot-cmp
-      suggestion.enabled = false;
-      panel.enabled = false;
+      settings = {
+        # These 2 needed to be disabled to use with copilot-cmp
+        suggestion.enabled = false;
+        panel.enabled = false;
+      };
     };
 
     # CMP Source for Copilot

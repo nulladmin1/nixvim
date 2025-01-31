@@ -8,39 +8,35 @@
     # Enable DAP integration with cmp
     cmp-dap.enable = true;
 
+    # Enable the Dap-UI within Neovim
+    # See source: https://github.com/rcarriga/nvim-dap-ui, options: https://nix-community.github.io/nixvim/search/?query=plugins.dap&option_scope=0&option=plugins.dap.extensions.dap-ui.enable
+    dap-ui = {
+      enable = true;
+      settings.floating.mappings = {
+        # Close floating window using the escape key or q
+        close = [
+          "<ESC>"
+          "q"
+        ];
+      };
+    };
+    # Go debugging support with delve
+    # See source: https://github.com/leoluz/nvim-dap-go, options: https://nix-community.github.io/nixvim/search/?query=plugins.dap&option_scope=0&option=plugins.dap.extensions.dap-go.enable
+    dap-go = {
+      enable = true;
+      settings.delve = {
+        path = "${pkgs.delve}/bin/dlv";
+      };
+    };
+
+    # Python debugging support
+    # See source: https://github.com/mfussenegger/nvim-dap-python, options: https://nix-community.github.io/nixvim/search/?query=plugins.dap&option_scope=0&option=plugins.dap.extensions.dap-python.enable
+    dap-python.enable = true;
+
     # Enable nvim-dap
     # See source: https://github.com/mfussenegger/nvim-dap, options: https://nix-community.github.io/nixvim/search/?query=plugins.dap&option_scope=0&option=plugins.dap.enable
     dap = {
       enable = true;
-
-      # Builtin extensions for nvim-dap
-      extensions = {
-        # Python debugging support
-        # See source: https://github.com/mfussenegger/nvim-dap-python, options: https://nix-community.github.io/nixvim/search/?query=plugins.dap&option_scope=0&option=plugins.dap.extensions.dap-python.enable
-        dap-python.enable = true;
-
-        # Go debugging support with delve
-        # See source: https://github.com/leoluz/nvim-dap-go, options: https://nix-community.github.io/nixvim/search/?query=plugins.dap&option_scope=0&option=plugins.dap.extensions.dap-go.enable
-        dap-go = {
-          enable = true;
-          delve = {
-            path = "${pkgs.delve}/bin/dlv";
-          };
-        };
-
-        # Enable the Dap-UI within Neovim
-        # See source: https://github.com/rcarriga/nvim-dap-ui, options: https://nix-community.github.io/nixvim/search/?query=plugins.dap&option_scope=0&option=plugins.dap.extensions.dap-ui.enable
-        dap-ui = {
-          enable = true;
-          floating.mappings = {
-            # Close floating window using the escape key or q
-            close = [
-              "<ESC>"
-              "q"
-            ];
-          };
-        };
-      };
 
       # Supported adapters for nvim-dap
       adapters = {
