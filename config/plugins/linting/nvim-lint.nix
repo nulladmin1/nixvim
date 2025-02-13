@@ -1,4 +1,8 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  rust-toolchain,
+  ...
+}: {
   plugins = {
     # Linting with nvim-lint
     # See source: https://github.com/mfussenegger/nvim-lint, options: https://nix-community.github.io/nixvim/search/?query=plugins.lint&option_scope=0&option=plugins.lint.enable
@@ -11,7 +15,7 @@
           cmd = "${pkgs.shellcheck}/bin/shellcheck";
         };
         clippy = {
-          cmd = "${pkgs.clippy}/bin/cargo-clippy";
+          cmd = "${rust-toolchain.clippy}/bin/cargo-clippy";
         };
         cpplint = {
           cmd = "${pkgs.cpplint}/bin/cpplint";
