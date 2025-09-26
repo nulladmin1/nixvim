@@ -1,13 +1,8 @@
-{
-  pkgs,
-  rust-toolchain,
-  ...
-}: {
+{...}: {
   # Unlike all other languages, using rustaceanvim to add a multitude of features for Rust
   # See source: https://github.com/mrcjkb/rustaceanvim, options: https://nix-community.github.io/nixvim/search/?query=plugins.rustaceanvim&option_scope=0&option=plugins.rustaceanvim.enable
   plugins.rustaceanvim = {
     enable = true;
-    rustAnalyzerPackage = pkgs.rust-analyzer;
 
     settings = {
       # Autoload the configuration for DAP
@@ -30,7 +25,7 @@
 
             # Use clippy to check for errors
             check = {
-              command = "${rust-toolchain.clippy}/bin/cargo-clippy";
+              command = "cargo-clippy";
               features = "all";
             };
 

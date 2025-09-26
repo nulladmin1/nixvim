@@ -1,8 +1,4 @@
-{
-  pkgs,
-  rust-toolchain,
-  ...
-}: {
+{pkgs, ...}: {
   # Enable Conform.nvim - a code formatter for Neovim (alternative to Null-ls)
   # See source: https://github.com/stevearc/conform.nvim, options: https://nix-community.github.io/nixvim/search/?query=plugins.conform&option_scope=0&option=plugins.conform-nvim.enable
   plugins = {
@@ -28,7 +24,7 @@
             command = "${pkgs.shellcheck}/bin/shellcheck";
           };
           rustfmt = {
-            command = "${rust-toolchain.rustfmt}/bin/rustfmt";
+            command = "rustfmt";
           };
           prettierd = {
             command = "${pkgs.prettierd}/bin/prettierd";

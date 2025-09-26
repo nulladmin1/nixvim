@@ -7,18 +7,11 @@
       url = "github:nix-community/nixvim";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
-    # Fenix - for Rust
-    fenix = {
-      url = "github:nix-community/fenix";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
   };
 
   outputs = {
     nixvim,
     nixpkgs,
-    fenix,
     ...
   } @ inputs: let
     systems = ["x86_64-linux" "x86_64-darwin" "aarch64-linux" "aarch64-darwin"];
@@ -26,14 +19,8 @@
     pkgs = forEachSystem (system:
       import nixpkgs {
         inherit system;
-        overlays = [fenix.overlays.default];
       });
     nixvimPkgs = forEachSystem (system: nixvim.legacyPackages.${system});
-
-    # Rust toolchain w/ Fenix
-    rust-toolchain =
-      forEachSystem (system:
-        pkgs.${system}.fenix.stable);
   in {
     packages = forEachSystem (system: {
       default = nixvimPkgs.${system}.makeNixvimWithModule {
@@ -41,7 +28,6 @@
         module = ./config;
         extraSpecialArgs = {
           inherit inputs;
-          rust-toolchain = rust-toolchain.${system};
         };
       };
     });
